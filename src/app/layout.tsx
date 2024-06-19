@@ -5,6 +5,8 @@ import { ClerkProvider } from "@clerk/nextjs";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const clerkPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
+
 const poppins = Poppins({
   subsets: ['latin'],
   variable: '--font-poppins',
@@ -23,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ClerkProvider>
+      <ClerkProvider publishableKey={clerkPublishableKey}>
         <body className={poppins.className}>{children}</body>
       </ClerkProvider>
     </html>
