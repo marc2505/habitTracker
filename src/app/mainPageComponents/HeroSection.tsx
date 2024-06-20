@@ -11,7 +11,7 @@ function HeroSection() {
                 className="block text-sm font-light rounded-lg px-9 py-3 text-white transition bg-customRed focus:outline-none"
                 type="button"
             >
-                {`Let's get started !`}
+                {`Let's get started !!!`}
             </button>
         </div>
     )
